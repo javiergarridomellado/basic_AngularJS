@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="filtros">
+<head>
+<meta charset="utf-8">
+<title>Filtros de expresiones </title>
+<meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <h1>Angular Café</h1>
+    <h2>Café Americano: {{ 12|currency : "€"}}</h2>
+    <h2>Café Latte: {{ 12|currency: "$" }}</h2>
+    
+    <p>{{"China" | uppercase }}</p>
+    <p>{{"costa rica" | uppercase }}</p>
+    <p>{{"coLOMBia"  }}</p>
+    <p>{{"CROACIA" | uppercase }}</p>
+    <p>{{"ChiLE" | uppercase }}</p>
+<p>{{3.141592653589 | number:2}}</p>
+    <p>{{999998887766|date: 'dd/MM/yy'}}</p>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" ></script>
+<script>
+    var filtros = angular.module('filtros', [])
+</script>
+</body>
+</html>

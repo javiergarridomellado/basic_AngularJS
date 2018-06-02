@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="holamundo">
+<head>
+<meta charset="utf-8">
+<title>AngularJS - Hola Mundo</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <h1>{{ "Mi Aplicación AngularJS #" + 1 |uppercase }}</h1>
+    <p>{{5+5}}</p>
+    
+    <div ng-controller="miControlador">
+    {{ mensaje }} {{segundomensaje}}
+        <p> Este libro fue escrito por {{libro.autor}}, se llama " {{libro.titulo}} " y \
+habla sobre {{libro.tema}} </p>
+        <h3>{{numeroAleatorio()}}</h3>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"\></script>
+<script>
+    var miAppAngular = angular.module('holamundo',[]);
+    miAppAngular.controller('miControlador', function ($scope) {
+        $scope.mensaje = "Expresiones AngularJS";
+        $scope.segundomensaje = "Segundo mensaje";
+        $scope.libro = {};
+        $scope.libro.autor = "Carlos Solis";
+        $scope.libro.titulo = "Manual del guerrero";
+        $scope.libro.tema = "AngularJS";
+        $scope.numeroAleatorio = function(){
+            return Math.floor( Math.random() * 100 );
+        }
+    });
+</script>    
+</body>
+</html>

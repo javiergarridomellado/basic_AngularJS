@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="controladores">
+<head>
+    <meta charset="utf-8">
+    <title>Controladores</title>
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <div ng-controller="miPrimerControlador">
+        <p>{{saludo}}</p>
+        <p>{{ mensaje }}</p>
+    </div>
+    <div ng-controller="alcance">
+        <p>{{color}}</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"\></script>
+    <script>
+        var controladorApp = angular.module('controladores',[]);
+        controladorApp.controller('miPrimerControlador' , function($scope){
+            var saludo = "Hola";
+            $scope.mensaje = "Mi mensaje!!";
+        })
+        controladorApp.controller('alcance',function($scope){
+            $scope.color ="verde";
+        })
+    </script>
+    
+    </body>
+</html>
